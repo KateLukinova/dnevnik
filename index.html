@@ -18,7 +18,7 @@
             <nav>
                 <ul class="navbar">
                     <li class="nav__item">
-                        <a class="nav__link" href="#">Главная</a>
+                        <a class="nav__link" href="#main">Главная</a>
                     </li>
                     <li class="nav__item">
                         <a class="nav__link" href="#services">О сервисе</a>
@@ -47,7 +47,7 @@
             </div>
         </div>
     </header>
-    <section class="main-screen">
+    <section class="main-screen" id="main">
         <div class="container">
             <div class="content">
                 <div class="content__column">
@@ -73,14 +73,21 @@
                 </div>
                 <div class="content__column">
                     <div class="main-img">
-                        <img src="img/main.png" alt="">
+                        <div class="circle-big">
+                            <span class="number">14 000</span>
+                            <span>довольных<br>родителя</span>
+                        </div>
+                        <div class="circle">
+                            <span class="number">7</span>
+                            <span>школ<br>работают<br>с нами</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     <section>
-        <div class="container services">
+        <div class="container services" id="services">
             <div class="content">
                 <div class="content__column">
                     <h2>О сервисе</h2>
@@ -107,6 +114,70 @@
             </div>
         </div>
     </section>
+    <section class="achievements" id="advantages">
+        <div class="container">
+            <div class="achievements-box">
+                <div class="achievements-box__item">
+                    <img src="img/ach1.png" alt="">
+                    <div class="text">
+                        Интуитивно-понятный интерфейс
+                    </div>
+                </div>
+                <div class="achievements-box__item">
+                    <img src="img/ach2.png" alt="">
+                    <div class="text">
+                        Ежедневное получение уведомлений
+
+                    </div>
+                </div>
+                <div class="achievements-box__item">
+                    <img src="img/ach3.png" alt="">
+                    <div class="text">
+                        Круглосуточная доступность
+                    </div>
+                </div>
+                <div class="achievements-box__item">
+                    <img src="img/ach4.png" alt="">
+                    <div class="text">
+                        Сервис создавался с участием учителей
+                    </div>
+                </div>
+                <div class="achievements-box__item">
+                    <img src="img/ach5.png" alt="">
+                    <div class="text">
+                        Компетентная<br>поддержка
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="map" id="contacts">
+        <div class="container">
+            <div class="content p-0">
+                <div class="content__column">
+                    <div class="contacts">
+                        <h3>Краснодар  /  Ставрополь</h3>
+                        <div class="contacts__item">
+                            <span>Телефон:</span>
+                            <a href="tel:+79283064000">+7(928) 306-4000</a>
+                        </div>
+                        <div class="contacts__item">
+                            <span>Email:</span>
+                            <a href="mailto:primatsoft@yandex.ru">primatsoft@yandex.ru</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content__column"></div>
+            </div>
+        </div>
+        <div class="map-box">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d90188.25767453348!2d38.92763465352365!3d45.057740095743235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40f04564714535b3%3A0xf720794f56c4beb6!2z0JrRgNCw0YHQvdC-0LTQsNGALCDQmtGA0LDRgdC90L7QtNCw0YDRgdC60LjQuSDQutGA0LDQuQ!5e0!3m2!1sru!2sru!4v1599230171933!5m2!1sru!2sru" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+    </section>
+
+    <footer>
+        ДневникПросто. 2020 г.
+    </footer>
 
     <script src="js/jquery.min.js"></script>
     <script src="js/aos.js"></script>
