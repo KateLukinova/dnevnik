@@ -10,6 +10,9 @@
 @font-face {
   font-family: 'Leto Sans';
   src: url("../fonts/LetoSans.otf"); }
+@font-face {
+  font-family: 'Leto Sans Bold';
+  src: url("../fonts/LetoSans-Bold.otf"); }
 /*reset css*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -74,13 +77,34 @@ h1 {
   font-size: 42px;
   line-height: 1.1;
   color: #1c1c1c;
-  position: relative; }
+  position: relative;
+  margin-bottom: 50px; }
 
 h2 {
   font-family: 'Helvetica Bold', sans-serif;
   font-size: 32px;
   line-height: 1.26;
-  color: white; }
+  color: white;
+  padding: 10px 40px;
+  border-radius: 50px;
+  background-color: #4587dd;
+  position: relative;
+  width: max-content;
+  margin-bottom: 60px; }
+  h2:before {
+    width: 100%;
+    height: 100%;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 15px;
+    z-index: -1;
+    border-radius: 50px;
+    background-color: #e2e2ec; }
+
+.p--bold {
+  font-family: 'Leto Sans Bold', sans-serif;
+  font-size: 17px; }
 
 header {
   position: fixed;
@@ -101,7 +125,8 @@ header {
   transition: all 0.5s ease;
   box-shadow: 1px 18px 18px -5px #f6f7f8;
   height: 92px;
-  width: 100%; }
+  width: 100%;
+  background-color: white; }
   header .header__content {
     display: flex;
     justify-content: space-between;
@@ -151,6 +176,12 @@ nav ul {
   .button:hover {
     background-color: #4587dd;
     color: white; }
+  .button.button--transparent {
+    background-color: transparent;
+    border: 2px solid #ffcf25; }
+    .button.button--transparent:hover {
+      border: 2px solid #4587dd;
+      color: #4587dd; }
 
 .button-box {
   display: flex;
@@ -162,7 +193,72 @@ nav ul {
 .login--mobile {
   display: none; }
 
+.main-screen {
+  background-image: url("../img/main-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: auto;
+  min-height: calc(100vh - 92px);
+  margin-top: 92px; }
+  .main-screen .button-box {
+    justify-content: flex-start; }
+    .main-screen .button-box .button {
+      margin-right: 12px; }
+
+.content {
+  display: flex;
+  justify-content: center;
+  padding: 80px 0;
+  width: 100%; }
+  .content .content__column {
+    width: 50%; }
+  .content h1, .content p {
+    max-width: 580px; }
+
+.main-img {
+  width: 100%;
+  transform: translateX(-20%); }
+  .main-img img {
+    width: 100%; }
+
+.advantages-block {
+  display: flex;
+  margin: 40px 0 50px; }
+  .advantages-block .advantages__item {
+    margin-right: 54px; }
+
+.possibility {
+  padding-left: 45px; }
+
+ul {
+  list-style: none;
+  margin: 25px 0; }
+  ul li {
+    font-family: 'Leto Sans', sans-serif;
+    font-size: 17px;
+    padding-left: 30px;
+    position: relative;
+    margin-bottom: 14px; }
+    ul li:before {
+      content: url("../img/chek.png");
+      position: absolute;
+      top: 0;
+      left: 0; }
+
+.services .content {
+  padding-bottom: 0; }
+
+@media (max-width: 1366px) {
+  .main-img {
+    transform: translateX(0); } }
 @media (max-width: 1200px) {
+  h1 {
+    font-size: 36px; }
+
+  p {
+    font-size: 15px; }
+
   nav ul li {
     margin: 0 20px;
     font-size: 14px; } }
@@ -196,7 +292,41 @@ nav ul {
           font-size: 18px; }
     nav.show {
       transform: translateX(0);
-      opacity: 1; } }
+      opacity: 1; }
+
+  .content {
+    flex-direction: column; }
+    .content .content__column {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; }
+
+  .content h1, .content p {
+    text-align: center; }
+
+  .advantages-block {
+    justify-content: space-around;
+    width: 100%;
+    max-width: 500px; }
+    .advantages-block .advantages__item {
+      margin: 0; }
+      .advantages-block .advantages__item.ml-align {
+        margin-left: 40px; }
+
+  .main-img {
+    max-width: 500px;
+    margin-top: 40px; }
+
+  .services-img {
+    align-self: flex-end;
+    transform: translateX(25%); }
+    .services-img img {
+      width: 100%; }
+
+  .possibility {
+    padding-left: 0; } }
 @media (max-width: 540px) {
   .button-box .menu-icon {
     margin-left: 15px; }
@@ -214,6 +344,34 @@ nav ul {
     font-size: 18px; }
 
   header {
-    height: 70px; } }
+    height: 70px; }
+
+  .main-screen {
+    margin-top: 70px; }
+
+  h1 {
+    font-size: 24px; }
+
+  p {
+    font-size: 14px; }
+
+  .advantages-block {
+    justify-content: space-between;
+    width: 100%;
+    max-width: 500px; }
+    .advantages-block .advantages__item {
+      margin: 0;
+      padding: 10px; }
+      .advantages-block .advantages__item.ml-align {
+        margin-left: 10px; }
+
+  .main-screen .button-box {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .main-screen .button-box .button {
+      margin: 0;
+      margin-bottom: 12px;
+      min-width: 100%; } }
 
 /*# sourceMappingURL=style.css.map */
